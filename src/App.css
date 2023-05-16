@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+
+.Nav {
+  margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Header {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: black;
+}
+
+.form-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.login-field {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.submit {
+  
+}
+
+.submit-button {
+  font-size: 2rem;
+  width: 155px;
+}

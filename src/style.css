@@ -10,3 +10,11 @@ html, body, #root {
 label {
     display:block;
 }
+
+.Nav-link {
+    background-color: black;
+}
+
+.Nav {
+    display: flexbox;
+}

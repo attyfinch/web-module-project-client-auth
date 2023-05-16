@@ -1,12 +1,28 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import Login from './components/login';
+
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <h2>Client Auth Project</h2>
-    </div>
+      <div className="App">
+      <div className="Nav">
+        <h2 className="Header">Friends Database</h2>
+        <Link to="/"><h5 className="Nav-link">LOGIN.</h5></Link>
+        <Link to="/friends"><h5 className="Nav-link">FRIENDLIST.</h5></Link>
+        <Link to="/friends/add"><h5 className="Nav-link">ADDFRIEND.</h5></Link>
+        <h5 className="Nav-link">LOGOUT</h5>
+      </div>
+      
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/friends"  />
+      </Routes>
+      
+
+      </div>
   );
 }
 
