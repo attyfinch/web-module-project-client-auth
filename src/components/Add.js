@@ -33,6 +33,7 @@ function Add() {
                 console.log(res)
         })
 
+        navigate("/friends")
     }
 
     return (
