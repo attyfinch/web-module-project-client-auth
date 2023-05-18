@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-
-
+import { useNavigate, Navigate } from "react-router-dom";
+import axios from "axios";
 
 
 const defaultCred = {username: "", password: ""};
 
 function Login() {
+
+    const navigate = useNavigate();
 
     const [cred, setCred ] = useState(defaultCred)
 
@@ -15,7 +17,13 @@ function Login() {
     
     const submit = (e) => {
         e.preventDefault();
-        console.log(cred)
+        axios
+            .post(`http://localhost:9000/api/login`, cred)
+            .then((res) => {
+                localStorage.setItem("token", res.data.token);
+                navigate('/friends')
+            })
+            .catch((err) => console.log(err));
     }
 
     return (
